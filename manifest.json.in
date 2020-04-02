@@ -1,0 +1,15 @@
+{
+    "name": "pistach.jaft",
+    "description": "A Mastodon mobile client for the Ubuntu Touch platform",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Pistach",
+    "hooks": {
+        "pistach": {
+            "apparmor": "pistach.apparmor",
+            "desktop":  "pistach.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Wamm K. D. <jaft.r@outlook.com>",
+    "framework" : "ubuntu-sdk-16.04"
+}
