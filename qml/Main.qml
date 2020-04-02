@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import "biwascheme-0.7.0.js" as Biwa
 import QtQuick 2.7
 import Ubuntu.Components 1.3
 //import QtQuick.Controls 2.2
