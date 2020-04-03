@@ -15,6 +15,7 @@
  */
 
 import "biwascheme-0.7.0.js" as Biwa
+import "Components"          as Components
 import QtQuick 2.7
 import Ubuntu.Components 1.3
 //import QtQuick.Controls 2.2
