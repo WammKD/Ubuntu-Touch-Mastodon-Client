@@ -31,25 +31,33 @@ MainView {
   width               : units.gu(45);
   height              : units.gu(75);
 
-  Page {
-    anchors.fill: parent
-    header      : PageHeader {
-                    id: header
-                    title: i18n.tr('Pistach')
-                  }
+  Components.ConvergentTabView {
+    id          : tabView;
+    anchors.fill: parent;
+    model       : [{ "name"     : i18n.tr("Home"),
+                     "iconName" : "ubuntu-store-symbolic",
+                     "sourceUrl": Qt.resolvedUrl("Test.qml") },
+                   { "name"    : i18n.tr("Notifications"),
+                     "iconName": "view-list-symbolic"    },
+                   { "name"    : i18n.tr("Local"),
+                     "iconName": "find"           },
+                   { "name"    : i18n.tr("Federated"),
+                     "iconName": "document-save",
+                     "count"   : 2                    }];
 
-    Label {
-      anchors {
-        top   : header.bottom;
-        left  : parent.left;
-        right : parent.right;
-        bottom: parent.bottom;
+    Loader {
+      id           : view;
+      anchors.fill : parent;
+      clip         : true;
+      source       : tabView.model[tabView.selectedIndex].sourceUrl;
+      onItemChanged: {
+        if(item) {
+          item.parent       = tabView.mainContent;
+          item.anchors.fill = tabView.mainContent;
+        }
       }
 
-      text: i18n.tr('Hello World!');
 
-      verticalAlignment  : Label.AlignVCenter;
-      horizontalAlignment: Label.AlignHCenter;
     }
   }
 }
