@@ -19,9 +19,22 @@
 #include <QUrl>
 #include <QString>
 #include <QQuickView>
+#include <libguile.h>
+#include <unistd.h>
+#include <limits.h>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
+    // Initialize Guile
+    char cwd[PATH_MAX];
+
+    getcwd(cwd, sizeof(cwd));
+    strcat(cwd, "/share/guile/2.0");
+
+    setenv("GUILE_LOAD_PATH", cwd, 1);
+
+    scm_init_guile();
+
+    // Initialize QML
     QGuiApplication *app = new QGuiApplication(argc, (char**)argv);
     app->setApplicationName("pistach.jaft");
 
