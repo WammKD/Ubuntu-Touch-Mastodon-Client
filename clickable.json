@@ -1,4 +1,15 @@
 {
   "template": "cmake",
-  "kill": "pistach"
+  "kill": "pistach",
+  "dependencies_target": [
+    "guile-2.0-dev"
+  ],
+  "install_lib": [
+    "/usr/lib/${ARCH_TRIPLET}/libguile-2.0.so*",
+    "/usr/lib/${ARCH_TRIPLET}/guile*",
+    "/usr/lib/${ARCH_TRIPLET}/libgc.so*"
+  ],
+  "install_data": {
+    "${ROOT}/share": "${INSTALL_DIR}"
+  }
 }

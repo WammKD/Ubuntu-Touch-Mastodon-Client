@@ -43,7 +43,10 @@ install(FILES ${PROJECT_NAME}.apparmor DESTINATION ${DATA_DIR})
 install(DIRECTORY qml DESTINATION ${DATA_DIR})
 install(DIRECTORY assets DESTINATION ${DATA_DIR})
 
+include_directories(/usr/include/guile/2.0)
+
 add_executable(${PROJECT_NAME} main.cpp)
+target_link_libraries(${PROJECT_NAME} /usr/lib/${ARCH_TRIPLET}/libguile-2.0.so.22)
 qt5_use_modules(${PROJECT_NAME} Gui Qml Quick QuickControls2)
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
 
