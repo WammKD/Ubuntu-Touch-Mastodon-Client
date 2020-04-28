@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pistach.jaft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-02 01:49+0000\n"
+"POT-Creation-Date: 2020-04-12 10:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,34 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:37 pistach.desktop.in.h:1
-msgid "Pistach"
+#: ../qml/Main.qml:92
+msgid "Home"
 msgstr ""
 
-#: ../qml/Main.qml:48
+#: ../qml/Main.qml:95
+msgid "Notifications"
+msgstr ""
+
+#: ../qml/Main.qml:98
+msgid "Local"
+msgstr ""
+
+#: ../qml/Main.qml:100
+msgid "Federated"
+msgstr ""
+
+#: ../qml/Test.qml:34
 msgid "Hello World!"
+msgstr ""
+
+#: ../qml/Test.qml:48
+msgid "Hello World2"
+msgstr ""
+
+#: ../qml/Test.qml:62
+msgid "Hello World3"
+msgstr ""
+
+#: pistach.desktop.in.h:1
+msgid "Pistach"
 msgstr ""
