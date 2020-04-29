@@ -1,0 +1,5 @@
+[submodule "Guile-Mastodon"]
+	path = Guile-Mastodon
+	url = https://github.com/WammKD/Guile-Mastodon
+	update = merge
+	branch = master
