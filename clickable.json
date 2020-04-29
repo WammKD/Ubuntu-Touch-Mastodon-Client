@@ -10,6 +10,7 @@
     "/usr/lib/${ARCH_TRIPLET}/libgc.so*"
   ],
   "install_data": {
-    "${ROOT}/share": "${INSTALL_DIR}"
+    "${ROOT}/share"                : "${INSTALL_DIR}",
+    "${ROOT}/Guile-Mastodon/elefan": "${INSTALL_DIR}/share/guile/2.0"
   }
 }
